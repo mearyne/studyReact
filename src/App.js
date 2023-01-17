@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./components/Counter";
+import CounterButton from "./components/CounterButton";
+import Weight from "./components/Weight";
+import WeightButton from "./components/WeightButton";
+import Snack from "./components/Snack";
+import SnackButton from "./components/SnackButton";
+import CounterSlice from "./components/CounterSlice";
+import CounterButtonSlice from "./components/CounterButtonSlice";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            {/*<Counter/>*/}
+            {/*<CounterButton/>*/}
+            {/*<Weight/>*/}
+            {/*<WeightButton/>*/}
+            <Snack/>
+            <SnackButton/>
+            <CounterSlice/>
+            <CounterButtonSlice/>
+        </div>
+    );
+
 }
 
 export default App;
