@@ -4,7 +4,6 @@ import {decrease, increase, init} from "../reducer/counterSlice";
 const CounterButtonSlice = () => {
     let dispatch = useDispatch();
 
-
     const onIncrease = () => {
         dispatch(increase(2));
     };
@@ -16,7 +15,6 @@ const CounterButtonSlice = () => {
     const onInit = () => {
         dispatch(init());
     };
-
 
     return (
         <div>
