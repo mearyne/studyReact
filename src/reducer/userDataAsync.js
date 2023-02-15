@@ -11,7 +11,7 @@ export const asyncUser = createAsyncThunk(
 );
 
 // 비동기 작업을 추가한 counter
-const userData = createSlice({
+const userDataAsync = createSlice({
     name: 'userDataAsync',
     initialState: {
         value: [],
@@ -32,4 +32,4 @@ const userData = createSlice({
     },
 });
 
-export default userData
+export default userDataAsync;

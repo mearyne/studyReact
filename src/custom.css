@@ -11,3 +11,23 @@ main {
     padding: 10px;
     margin-top: 10px;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: lightblue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: bisque;
+}
+
+.body {
+    display: flex;
+    min-height: 80vh;
+    background-color: lightpink;
+}

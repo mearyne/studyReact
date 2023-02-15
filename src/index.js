@@ -5,16 +5,18 @@ import {Provider} from "react-redux";
 import store from "./store/store";
 import {ProSidebarProvider} from "react-pro-sidebar";
 import './index.css'
+import {BrowserRouter} from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        {/*<Provider store={store}>*/}
-        {/*    <App/>*/}
-        {/*</Provider>*/}
-        <ProSidebarProvider>
-            <App/>
-        </ProSidebarProvider>
+        <Provider store={store}>
+            <ProSidebarProvider>
+                <BrowserRouter>
+                    <App/>
+                </BrowserRouter>
+            </ProSidebarProvider>
+        </Provider>
     </React.StrictMode>
 );
