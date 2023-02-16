@@ -25,7 +25,7 @@ export default function Buttons() {
 
     return (
         <Stack spacing={0.5} direction="row">
-            <Button variant="outlined" startIcon={<DeleteIcon/>}>초기화</Button>
+            <Button variant="outlined" endIcon={<DeleteIcon/>}>초기화</Button>
             <Button variant="outlined" onClick={() => {
                 dispatch(asyncUser());
             }} startIcon={<SearchOutlinedIcon/>}>조회</Button>
@@ -37,7 +37,6 @@ export default function Buttons() {
             <Button variant="outlined" startIcon={<GetAppOutlinedIcon/>}>가져오기</Button>
             <Button variant="outlined" startIcon={<EmailOutlinedIcon/>}>메일</Button>
             <Button variant="outlined" startIcon={<SmsOutlinedIcon/>} disabled>SMS</Button>
-            <Button variant="outlined" startIcon={<SendOutlinedIcon/>} disabled>결재</Button>
         </Stack>
     );
 }

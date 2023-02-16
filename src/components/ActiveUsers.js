@@ -23,7 +23,11 @@ const ActiveUsers = () => {
                 <button type="submit">입력</button>
             </form>
             <ul>
-                {users.map((user, index) => <li key={index}>userId:{user.userId}, email: {user.email}</li>)}
+                {
+                    users.map((user, index) =>
+                        <li key={index}> userId:{user.userId} email: {user.email}</li>
+                    )
+                }
             </ul>
             <h3>유저수 : {users.length}</h3>
         </div>

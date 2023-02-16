@@ -3,7 +3,7 @@ import SideMenu from "./SideMenu";
 
 const Body = () => {
     return (
-        <div id="app" style={({height: "100vh"}, {display: "flex"})}>
+        <div style={({display: "flex", height: "100vh"})}>
             <SideMenu/>
             <Main/>
         </div>

@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import {Menu, MenuItem, Sidebar, useProSidebar} from "react-pro-sidebar";
+import {Menu, MenuItem, Sidebar, SubMenu, useProSidebar} from "react-pro-sidebar";
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';
 import InsertChartOutlinedOutlinedIcon from '@mui/icons-material/InsertChartOutlinedOutlined';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
@@ -28,7 +28,12 @@ const SideMenu = () => {
                 </MenuItem>
                 <MenuItem component={<Link to="/before"/>} icon={<HistoryOutlinedIcon/>}>Before</MenuItem>
                 <MenuItem component={<Link to="/buttons"/>} icon={<CheckBoxOutlinedIcon/>}>Buttons</MenuItem>
-                <MenuItem component={<Link to="/input"/>} icon={<PlagiarismOutlinedIcon/>}>Input</MenuItem>
+                <SubMenu label={'Input'} icon={<PlagiarismOutlinedIcon/>}>
+                    <MenuItem component={<Link to="/textType"/>}>TextType</MenuItem>
+                    <MenuItem component={<Link to="/autoComplete"/>}>AutoComplete</MenuItem>
+                    <MenuItem component={<Link to="/option-select"/>}>Option-Select</MenuItem>
+                    <MenuItem component={<Link to="/day"/>}>Day</MenuItem>
+                </SubMenu>
                 <MenuItem component={<Link to="/data"/>} icon={<InsertChartOutlinedOutlinedIcon/>}>Data</MenuItem>
                 <MenuItem component={<Link to="/dataApi"/>} icon={<HelpOutlineOutlinedIcon/>}>DataApi</MenuItem>
                 <MenuItem component={<Link to="/customizedSnakebars"/>} icon={<ErrorOutlinedIcon/>}>Alert</MenuItem>
