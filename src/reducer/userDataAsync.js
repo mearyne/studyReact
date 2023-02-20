@@ -33,11 +33,36 @@ const userDataAsync = createSlice({
             state.value.push(user);
         },
         remove: (state, action) => {
-            state.value = [];
+            // console.log(action.payload);
+            // state.value = [];
+
+            for (let i = 0; i < state.value.length; i++) {
+                for (let j = 0; j < action.payload.length; j++) {
+                    if (state.value[i].id === action.payload[j].id) {
+                        state.value.splice(i, 1);
+                        i--;
+                        break;
+                    }
+                }
+            }
+
 
         },
         update: (state, action) => {
-            state.value = [];
+            const user = {
+                email: action.payload.email.value,
+                first_name: action.payload.first_name.value,
+                last_name: action.payload.last_name.value,
+                avatar: action.payload.avatar.value,
+            }
+
+            for (let i = 0; i < state.value.length; i++) {
+                if (Number(action.payload.id.value) === state.value[i].id) {
+                    user.id = action.payload.id.value;
+                    state.value[i] = user;
+                }
+            }
+
 
         }
     },

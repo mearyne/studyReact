@@ -3,12 +3,16 @@ import {createSlice} from "@reduxjs/toolkit";
 const selectedSlice = createSlice({
     name: 'selectedSlice',
     initialState: {
-        value: []
+        value: [{
+            id: -1,
+            email: "",
+            first_name: "",
+            last_name: "",
+            avatar: ""
+        }]
     },
     reducers: {
         changeSelected: (state, action) => {
-            console.log(action.payload);
-            console.log(state.value);
             state.value = action.payload;
         }
     }

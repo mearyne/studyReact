@@ -11,16 +11,12 @@ const DataApi = () => {
     const dispatch = useDispatch();
 
     let value = useSelector(state => state.userDataAsync.value);
-    const selected = useSelector(state => state.selected.value);
     const onSelectionChanged = (e) => {
         // const currentSelectedRowKeys = e.currentSelectedRowKeys;
         // const currentDeselectedRowKeys = e.currentDeselectedRowKeys;
         const allSelectedRowKeys = e.selectedRowKeys;
         // const allSelectedRowsData = e.selectedRowsData;
         dispatch(changeSelected(allSelectedRowKeys));
-
-        console.log('이벤트로관리되는 selected: ', allSelectedRowKeys);
-        console.log('state관리되는 selected: ', selected);
 
     }
 
