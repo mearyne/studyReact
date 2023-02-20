@@ -25,7 +25,7 @@ export default function Buttons() {
 
     return (
         <Stack spacing={0.5} direction="row">
-            <Button variant="outlined" endIcon={<DeleteIcon/>}>초기화</Button>
+            <Button variant="outlined" startIcon={<DeleteIcon/>}>초기화</Button>
             <Button variant="outlined" onClick={() => {
                 dispatch(asyncUser());
             }} startIcon={<SearchOutlinedIcon/>}>조회</Button>
