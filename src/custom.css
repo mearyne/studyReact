@@ -32,3 +32,8 @@ footer {
     min-height: 80vh;
     background-color: lightpink;
 }
+
+.menu {
+    font-family: sans-serif;
+    text-align: center;
+}

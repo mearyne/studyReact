@@ -9,51 +9,10 @@ import OptionSelect from "../mainComponent/OptionSelect";
 import Day from "../mainComponent/Day";
 import TextType from "../mainComponent/TextType";
 import AutoComplete from "../mui/AutoComplete";
+import {menuData} from "../data/menuData";
 
-const menuData = [
-    {
-        path: "before",
-        element: <Before/>
-    },
-    {
-        path: "buttons",
-        element: <Buttons/>
-    },
-    {
-        path: "data",
-        element: <Data/>
-    },
-    {
-        path: "customizedSnackbars",
-        element: <CustomizedSnackbars/>
-    },
-    {
-        path: "dataApi",
-        element: <DataApi/>
-    },
-    {
-        path: "badgeVisibility",
-        element: <BadgeVisibility/>
-    },
-    {
-        path: "textType",
-        element: <TextType/>
-    },
-    {
-        path: "option-select",
-        element: <OptionSelect/>
-    },
-    {
-        path: "day",
-        element: <Day/>
-    },
-    {
-        path: "autoComplete",
-        element: <AutoComplete/>
-    },
-]
 
-const Main = () => {
+const Mains = () => {
 
     return (
         <main>
@@ -68,18 +27,15 @@ const Main = () => {
                 {/*<Route path="/option-select" element={<OptionSelect/>}></Route>*/}
                 {/*<Route path="/day" element={<Day/>}></Route>*/}
                 {/*<Route path="/autoComplete" element={<AutoComplete/>}></Route>*/}
-
                 {
-                    menuData.map(({path, element}) => {
-                        return <Route path={path} element={element}/>
-                    })
+                    menuData.map(({path, element}) =>
+                        <Route exact key={path} path={path} element={element}></Route>
+                    )
                 }
-
-
             </Routes>
 
         </main>
-    );
+    )
 };
 
-export default Main
+export default Mains

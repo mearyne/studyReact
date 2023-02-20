@@ -1,42 +1,53 @@
+import Before from "../mainComponent/Before";
+import Buttons from "../mainComponent/Buttons";
+import Data from "../mainComponent/Data";
+import CustomizedSnackbars from "../mainComponent/CustomizedSnackbars";
+import DataApi from "../mainComponent/DataApi";
+import BadgeVisibility from "../mainComponent/Badge";
+import TextType from "../mainComponent/TextType";
+import OptionSelect from "../mainComponent/OptionSelect";
+import Day from "../mainComponent/Day";
+import AutoComplete from "../mui/AutoComplete";
+
 export const menuData = [
     {
         path: "before",
-        element: "Before"
+        element: <Before/>
     },
     {
         path: "buttons",
-        element: "Buttons"
+        element: <Buttons/>
     },
     {
         path: "data",
-        element: "Data"
+        element: <Data/>
     },
     {
         path: "customizedSnackbars",
-        element: "CustomizedSnackbars"
+        element: <CustomizedSnackbars/>
     },
     {
         path: "dataApi",
-        element: "DataApi"
+        element: <DataApi/>
     },
     {
         path: "badgeVisibility",
-        element: "BadgeVisibility"
+        element: <BadgeVisibility/>
     },
     {
         path: "textType",
-        element: "TextType"
+        element: <TextType/>
     },
     {
         path: "option-select",
-        element: "OptionSelect"
+        element: <OptionSelect/>
     },
     {
         path: "day",
-        element: "Day"
+        element: <Day/>
     },
     {
         path: "autoComplete",
-        element: "AutoComplete"
+        element: <AutoComplete/>
     },
 ]

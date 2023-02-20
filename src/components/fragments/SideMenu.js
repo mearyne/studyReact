@@ -36,7 +36,7 @@ const SideMenu = () => {
                 </SubMenu>
                 <MenuItem component={<Link to="/data"/>} icon={<InsertChartOutlinedOutlinedIcon/>}>Data</MenuItem>
                 <MenuItem component={<Link to="/dataApi"/>} icon={<HelpOutlineOutlinedIcon/>}>DataApi</MenuItem>
-                <MenuItem component={<Link to="/customizedSnakebars"/>} icon={<ErrorOutlinedIcon/>}>Alert</MenuItem>
+                <MenuItem component={<Link to="/customizedSnackbars"/>} icon={<ErrorOutlinedIcon/>}>Alert</MenuItem>
                 <MenuItem component={<Link to="/badgeVisibility"/>} icon={<LoyaltyOutlinedIcon/>}>badge</MenuItem>
             </Menu>
 
