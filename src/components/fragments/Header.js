@@ -1,3 +1,4 @@
+import MyMenu from "../mainComponent/MyMenu";
 
 const Header = () => {
     return (

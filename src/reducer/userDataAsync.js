@@ -7,6 +7,7 @@ export const asyncUser = createAsyncThunk(
     async () => {
         const response = await axios.get('https://reqres.in/api/users');
         return await response.data.data;
+
     }
 );
 
@@ -16,6 +17,29 @@ const userDataAsync = createSlice({
     initialState: {
         value: [],
         state: 'Welcome'
+    },
+    reducers: {
+        init: (state) => {
+            state.value = [];
+        },
+        add: (state, action) => {
+            const user = {
+                id: action.payload.id.value,
+                email: action.payload.email.value,
+                first_name: action.payload.first_name.value,
+                last_name: action.payload.last_name.value,
+                avatar: action.payload.avatar.value,
+            }
+            state.value.push(user);
+        },
+        remove: (state, action) => {
+            state.value = [];
+
+        },
+        update: (state, action) => {
+            state.value = [];
+
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(asyncUser.pending, (state, action) => {
@@ -33,3 +57,4 @@ const userDataAsync = createSlice({
 });
 
 export default userDataAsync;
+export const {init, add, update, remove} = userDataAsync.actions
