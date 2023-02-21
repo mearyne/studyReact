@@ -1,11 +1,11 @@
 import {combineReducers} from "redux";
 import weight from "./weight";
-import counter from "./counter";
 import snackSlice from "./snackSlice";
 import counterSlice from "./counterSlice";
 import counterAsync from "./counterAsync";
 import userDataAsync from "./userDataAsync";
 import selectedSlice from "./selectedSlice";
+import historySlice from "./historySlice";
 
 const rootReducer = combineReducers({
     // counter: counter,
@@ -15,6 +15,7 @@ const rootReducer = combineReducers({
     counterSlice: counterSlice.reducer,
     counterAsync: counterAsync.reducer,
     userDataAsync: userDataAsync.reducer,
+    historySlice: historySlice.reducer
 
 });
 
