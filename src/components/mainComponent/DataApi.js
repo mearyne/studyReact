@@ -25,6 +25,7 @@ const DataApi = () => {
             <DataGrid id="dataGrid"
                       dataSource={value}
                       onSelectionChanged={onSelectionChanged}
+                      columnAutoWidth={true}
             >
                 <Selection mode={"multiple"}/>
                 <Column dataField="id"/>

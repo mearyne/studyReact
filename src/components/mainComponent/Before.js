@@ -9,6 +9,8 @@ import CounterButtonSlice from "../CounterButtonSlice";
 import CounterAsync from "../CounterAsync";
 import ActiveUsers from "../ActiveUsers";
 import UseMemoTest from "../UseMemoTest";
+import TestCount from "./TestCount";
+import TestCountButton from "./TestCountButton";
 
 const Before = () => {
     return (
@@ -21,6 +23,8 @@ const Before = () => {
             <CounterButtonSlice/>
             <CounterAsync/>
             <ActiveUsers/>
+            <TestCount/>
+            <TestCountButton/>
         </div>
     );
 

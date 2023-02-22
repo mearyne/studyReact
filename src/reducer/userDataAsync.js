@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
-import {logger} from "redux-logger/src";
 
 export const asyncUser = createAsyncThunk(
     'user/table',
@@ -57,7 +56,7 @@ const userDataAsync = createSlice({
             }
 
             for (let i = 0; i < state.value.length; i++) {
-                if (Number(action.payload.id.value) === state.value[i].id) {
+                if (Number(action.payload.id.value) === state.value[i].id || action.payload.id.value === state.value[i].id) {
                     user.id = action.payload.id.value;
                     state.value[i] = user;
                 }

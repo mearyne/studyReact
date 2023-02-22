@@ -30,6 +30,9 @@
     "redux-logger": "^3.0.6",
     "web-vitals": "^2.1.4"
   },
+  "overrides": {
+    "@types/react": "^17.0.38"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

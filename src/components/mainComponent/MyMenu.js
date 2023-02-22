@@ -29,16 +29,55 @@ function MyMenu() {
         // </Menu>
 
         <Menu className={"menu"} mode={"horizontal"} style={{marginTop: "0"}}>
+            <SubMenu title={"depth-1"}>
+                <SubMenu title={"depth-2"}>
+                    <SubMenu title={"depth-3"}>
+                        <MenuItem>hello</MenuItem>
+                        <MenuItem>hello</MenuItem>
+                        <MenuItem>hello</MenuItem>
+                        <MenuItem>hello</MenuItem>
+                        <MenuItem>hello</MenuItem>
+                    </SubMenu>
+                    <MenuItem>hello</MenuItem>
+                    <MenuItem>hello</MenuItem>
+                    <MenuItem>hello</MenuItem>
+                </SubMenu>
+                <MenuItem>hello</MenuItem>
+                <MenuItem>hello</MenuItem>
+                <MenuItem>hello</MenuItem>
+                <MenuItem>hello</MenuItem>
+                <MenuItem>hello</MenuItem>
+                <MenuItem>hello</MenuItem>
+            </SubMenu>
             {
                 menuData.map((menu, idx) => {
-                    return <MenuItem key={idx} onClick={() => {
+                    return <MenuItem className={"prevent-select"} key={idx} onClick={() => {
                         dispatch(add(menu.path));
-                        navigate('/' + menu.path)
+                        navigate('/' + menu.path);
                     }
                     }>{menu.path}</MenuItem>
                 })
             }
-
+            {/*<SubMenu title={"depth-1"}>*/}
+            {/*    <SubMenu title={"depth-2"}>*/}
+            {/*        <SubMenu title={"depth-3"}>*/}
+            {/*            <MenuItem>hello</MenuItem>*/}
+            {/*            <MenuItem>hello</MenuItem>*/}
+            {/*            <MenuItem>hello</MenuItem>*/}
+            {/*            <MenuItem>hello</MenuItem>*/}
+            {/*            <MenuItem>hello</MenuItem>*/}
+            {/*        </SubMenu>*/}
+            {/*        <MenuItem>hello</MenuItem>*/}
+            {/*        <MenuItem>hello</MenuItem>*/}
+            {/*        <MenuItem>hello</MenuItem>*/}
+            {/*    </SubMenu>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*    <MenuItem>hello</MenuItem>*/}
+            {/*</SubMenu>*/}
         </Menu>
 
     );

@@ -1,13 +1,14 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+const initialState = {
+    history: [],
+    current: ""
+}
 
 const historySlice = createSlice({
     name: 'historySlice',
     initialState: {
-        value: {
-            history: [],
-            current: ""
-        },
+        value: initialState,
     },
     reducers: {
         /**
@@ -32,14 +33,21 @@ const historySlice = createSlice({
          * history 기록을 삭제한다
          */
         remove: (state, action) => {
+            let deleteIdx = -1;
+            console.log(state.value.history.length);
             for (let i = 0; i < state.value.history.length; i++) {
                 if (state.value.history[i] === action.payload) {
-                    state.value.history.splice(i, 1);
+                    deleteIdx = i;
                 }
             }
+            state.value.history.splice(deleteIdx, 1);
+        },
+        changeCurrent: (state, action) => {
+            state.value.current = action.payload;
         }
+
     },
 })
 
 export default historySlice
-export const {add, remove} = historySlice.actions
+export const {add, remove, changeCurrent} = historySlice.actions

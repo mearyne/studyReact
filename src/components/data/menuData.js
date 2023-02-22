@@ -8,6 +8,8 @@ import TextType from "../mainComponent/TextType";
 import OptionSelect from "../mainComponent/OptionSelect";
 import Day from "../mainComponent/Day";
 import AutoComplete from "../mui/AutoComplete";
+import Genshin from "../mainComponent/Genshin";
+
 
 export const menuData = [
     {
@@ -50,4 +52,9 @@ export const menuData = [
         path: "autoComplete",
         element: <AutoComplete/>
     },
+    {
+        path: "genshin",
+        element: <Genshin/>
+
+    }
 ]
