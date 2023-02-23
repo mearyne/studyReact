@@ -6,16 +6,14 @@ export const asyncUser = createAsyncThunk(
     async () => {
         const response = await axios.get('https://reqres.in/api/users');
         return await response.data.data;
-
     }
 );
 
-// 비동기 작업을 추가한 counter
+// 비동기 작업을 추가함
 const userDataAsync = createSlice({
     name: 'userDataAsync',
     initialState: {
-        value: [],
-        state: 'Welcome'
+        value: []
     },
     reducers: {
         init: (state) => {
@@ -32,9 +30,6 @@ const userDataAsync = createSlice({
             state.value.push(user);
         },
         remove: (state, action) => {
-            // console.log(action.payload);
-            // state.value = [];
-
             for (let i = 0; i < state.value.length; i++) {
                 for (let j = 0; j < action.payload.length; j++) {
                     if (state.value[i].id === action.payload[j].id) {

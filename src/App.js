@@ -5,7 +5,7 @@ import Body from "./components/fragments/Body";
 import Footer from "./components/fragments/Footer";
 import {MenuItem, SubMenu} from "rc-menu";
 import Menu from "rc-menu/es/Menu";
-import MyMenu from "./components/mainComponent/MyMenu";
+import MyMenu from "./components/fragments/MyMenu";
 
 function App() {
     return (

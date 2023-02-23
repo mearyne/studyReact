@@ -55,6 +55,9 @@ export const menuData = [
     {
         path: "genshin",
         element: <Genshin/>
+    },
+    {
+        path: "menu",
 
     }
 ]
