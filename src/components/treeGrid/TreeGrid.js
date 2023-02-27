@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Template} from 'devextreme-react/core/template';
 import TreeList, {
-    Column, ColumnChooser, HeaderFilter, SearchPanel, Selection, Lookup,
+    Column, HeaderFilter, SearchPanel, Selection, Lookup,
 } from 'devextreme-react/tree-list';
 
 import {employees, priorities, tasks} from './data.js';
@@ -17,19 +17,18 @@ const TreeGrid = () => {
     return (
         <TreeList
             dataSource={dataSourceOptions}
-            showBorders={true}
-            columnAutoWidth={true}
-            wordWrapEnabled={true}
-            defaultExpandedRowKeys={expandedKeys}
-            defaultSelectedRowKeys={selectedKeys}
-            keyExpr="Task_ID"
-            parentIdExpr="Task_Parent_ID"
+            showBorders={true} // 가장 바깥선 경계선 표시 여부
+            columnAutoWidth={true} // column 자동 크기 조절
+            wordWrapEnabled={true} // 단어 자동 줄넘기기 여부
+            defaultExpandedRowKeys={expandedKeys} // 기본적으로 열려있는 키
+            defaultSelectedRowKeys={selectedKeys} // 기본적으로 선택되어 있는 키
+            keyExpr="Task_ID" // 컬럼의 ID 기준점
+            parentIdExpr="Task_Parent_ID" // 누군가의 자식인지 기준점
             id="tasks"
         >
             <SearchPanel visible={true} width={250}/>
             <HeaderFilter visible={true}/>
             <Selection mode="multiple"/>
-            <ColumnChooser enabled={true}/>
 
             <Column dataField="Task_Subject" width={300}/>
             <Column

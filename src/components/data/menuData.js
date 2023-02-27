@@ -9,6 +9,7 @@ import OptionSelect from "../mainComponent/OptionSelect";
 import Day from "../mainComponent/Day";
 import AutoComplete from "../mui/AutoComplete";
 import Genshin from "../mainComponent/Genshin";
+import TreeGrid from "../treeGrid/TreeGrid";
 
 
 export const menuData = [
@@ -57,7 +58,8 @@ export const menuData = [
         element: <Genshin/>
     },
     {
-        path: "menu",
+        path: "treeGrid",
+        element: <TreeGrid/>
 
     }
 ]
