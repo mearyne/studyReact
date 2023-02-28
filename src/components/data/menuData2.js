@@ -1,67 +1,4 @@
-import Before from "../mainComponent/Before";
-import Buttons from "../mainComponent/Buttons";
-import Data from "../mainComponent/Data";
-import CustomizedSnackbars from "../mainComponent/CustomizedSnackbars";
-import DataApi from "../mainComponent/DataApi";
-import BadgeVisibility from "../mainComponent/Badge";
-import TextType from "../mainComponent/TextType";
-import OptionSelect from "../mainComponent/OptionSelect";
-import Day from "../mainComponent/Day";
-import AutoComplete from "../mui/AutoComplete";
-import Genshin from "../mainComponent/Genshin";
-import TreeGrid from "../treeGrid/TreeGrid";
-
-
-export const menuData = [
-    // {
-    //     path: "before",
-    //     element: <Before/>
-    // },
-    // {
-    //     path: "buttons",
-    //     element: <Buttons/>
-    // },
-    // {
-    //     path: "data",
-    //     element: <Data/>
-    // },
-    // {
-    //     path: "customizedSnackbars",
-    //     element: <CustomizedSnackbars/>
-    // },
-    // {
-    //     path: "dataApi",
-    //     element: <DataApi/>
-    // },
-    // {
-    //     path: "badgeVisibility",
-    //     element: <BadgeVisibility/>
-    // },
-    // {
-    //     path: "textType",
-    //     element: <TextType/>
-    // },
-    // {
-    //     path: "option-select",
-    //     element: <OptionSelect/>
-    // },
-    // {
-    //     path: "day",
-    //     element: <Day/>
-    // },
-    // {
-    //     path: "autoComplete",
-    //     element: <AutoComplete/>
-    // },
-    // {
-    //     path: "genshin",
-    //     element: <Genshin/>
-    // },
-    // {
-    //     path: "treeGrid",
-    //     element: <TreeGrid/>
-    //
-    // }
+export const menuData2 = [
     {
         menuId: 1,
         menuParentId: -1,
@@ -139,4 +76,4 @@ export const menuData = [
         rema: "비고7",
         usedYn: "사용여부7",
     },
-]
+];

@@ -14,8 +14,9 @@ const DataApi = () => {
     const onSelectionChanged = (e) => {
         // const currentSelectedRowKeys = e.currentSelectedRowKeys;
         // const currentDeselectedRowKeys = e.currentDeselectedRowKeys;
-        const allSelectedRowKeys = e.selectedRowKeys;
         // const allSelectedRowsData = e.selectedRowsData;
+
+        const allSelectedRowKeys = e.selectedRowKeys;
         dispatch(changeSelected(allSelectedRowKeys));
 
     }

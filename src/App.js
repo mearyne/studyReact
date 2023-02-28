@@ -6,12 +6,14 @@ import Footer from "./components/fragments/Footer";
 import {MenuItem, SubMenu} from "rc-menu";
 import Menu from "rc-menu/es/Menu";
 import MyMenu from "./components/fragments/MyMenu";
+import HorizantalMenu from "./components/fragments/HorizantalMenu";
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <MyMenu/>
+            {/*<MyMenu/>*/}
+            <HorizantalMenu/>
             <Body/>
             <Footer/>
         </div>

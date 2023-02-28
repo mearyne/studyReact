@@ -15,7 +15,7 @@ class Login extends Component {
         const {dispatch} = this.props;
         const id = this.id.value;
         const pw = this.password.value;
-        dispatch(login(id, pw))
+        dispatch(login(id, pw));
     };
 
     render() {
