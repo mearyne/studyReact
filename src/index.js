@@ -6,6 +6,8 @@ import store from "./store/store";
 import {ProSidebarProvider} from "react-pro-sidebar";
 import './index.css'
 import {BrowserRouter} from "react-router-dom";
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +16,11 @@ root.render(
         <Provider store={store}>
             <ProSidebarProvider>
                 <BrowserRouter>
-                    <App/>
+                    <DevSupport ComponentPreviews={ComponentPreviews}
+                                useInitialHook={useInitial}
+                    >
+                        <App/>
+                    </DevSupport>
                 </BrowserRouter>
             </ProSidebarProvider>
         </Provider>

@@ -1,6 +1,5 @@
 import Mains from "./Mains";
 import MenuHistory from "./MenuHistory";
-import SideMenu from "./SideMenu";
 
 
 const Body = () => {
